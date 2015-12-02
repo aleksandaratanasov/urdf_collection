@@ -1,0 +1,40 @@
+1)The STEP file seems to contain a model that slightly different from our robot
+  # The kuka_kr3_freecad project is used to generate meshes from each link of the robot in the STEP file and export those as LinkX.obj
+2)Using the collada_urdf tool I managed to create a URDF file (original name: body.urdf) from the Collada file that Rosen created for our project. The tool also extracted a single DAE file (Collada file) per link but all those were exported to /tmp
+  # Moved all extracted DAE files from /tmp to this folder
+  # Renamed all DAE links to LinkX.dae
+  # Renamed body.urdf (inside ../urdf/) to KR3CR.urdf
+  # Modified the URDF file to point at the DAE files: 
+  
+    <link name="link0">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://industrial_kuka_ros/robot_description/meshes/kr3cr/Link1.dae" scale="1 1 1" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://industrial_kuka_ros/robot_description/meshes/kr3cr/Link1.dae" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1" />
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <inertia ixx="0.4" ixy="0" ixz="0" iyy="0.4" iyz="0" izz="0.4"/>
+    </inertial>
+  </link>
+  ################## TODO: change the name of each <link/> (use the KR5.urdf and KR16.urdf files as reference)
+  ################## TODO: Looking at the URDF of the other robots I noticed that we have some information missing - mass, real inertia, velocity etc. Those can be obtained from the documentation or maybe even from the original DAE file (from Rosen)
+  
+  # Converting to OBJ seems not to be the best idea due to the fact that I'm unable to figure a way of merging the meshes of a link (for example the K,U,K and A with the main body of Link2) into a single one that can be then exported as a single OBJ file. URDF also supports DAE files so this is not necessary at all. :)
+  # Fixed face normals:
+      - Open file in FreeCAD
+      - Go to Meshes->Analyze->Evaluate & repair mesh...
+      - Select mesh from the list
+      - Press "Analyze" for Orientation (this will check the orientation of all face normals for the selected mesh
+      - If flipped normals are found, click on Repair
+      - If the flipping creates "black" faces, this means the the normals of those faces point in a wrong direction so we need to invert those again: select mesh and then Meshes->Flip normals...
+      - Also analyzed each mesh if it is solid: Meshes->Analyze->Check solid mesh
+      - Export back to DAE once finished (File->Export->...)

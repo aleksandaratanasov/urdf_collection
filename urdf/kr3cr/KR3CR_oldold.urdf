@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<robot name="body"
+       xmlns:xi="http://www.w3.org/2001/XInclude"
+       xmlns:gazebo="http://playerstage.sourceforge.net/gazebo/xmlschema/#gz"
+       xmlns:model="http://playerstage.sourceforge.net/gazebo/xmlschema/#model"
+       xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor"
+       xmlns:body="http://playerstage.sourceforge.net/gazebo/xmlschema/#body"
+       xmlns:geom="http://playerstage.sourceforge.net/gazebo/xmlschema/#geom"
+       xmlns:joint="http://playerstage.sourceforge.net/gazebo/xmlschema/#joint"
+       xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
+       xmlns:rendering="http://playerstage.sourceforge.net/gazebo/xmlschema/#rendering"
+       xmlns:renderable="http://playerstage.sourceforge.net/gazebo/xmlschema/#renderable"
+       xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
+       xmlns:physics="http://playerstage.sourceforge.net/gazebo/xmlschema/#physics">
+  <link name="link0">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package:///urdf_collection/meshes/kr3cr/kr3cr_link1.stl" scale="1 1 1" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://urdf_collection/meshes/kr3cr/kr3cr_link1.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1" />
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <inertia ixx="0.4" ixy="0" ixz="0" iyy="0.4" iyz="0" izz="0.4"/>
+    </inertial>
+  </link>
+  <link name="link1">
+    <visual>
+      <origin xyz="0 0 0" rpy="3.14159 -0 0"/>
+      <geometry>
+        <mesh filename="package://urdf_collection/meshes/kr3cr/kr3cr_link2.stl" scale="1 1 1" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="3.14159 -0 0"/>
+      <geometry>
+        <mesh filename="package://urdf_collection/meshes/kr3cr/kr3cr_link2.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1" />
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <inertia ixx="0.4" ixy="0" ixz="0" iyy="0.4" iyz="0" izz="0.4"/>
+    </inertial>
+  </link>
+  <link name="link2">
+    <visual>
+      <origin xyz="0.1 4.28626e-17 -0.35" rpy="1.5708 -0 0"/>
+      <geometry>
+        <mesh filename="package://urdf_collection/meshes/kr3cr/kr3cr_link3.stl" scale="1 1 1" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.1 4.28626e-17 -0.35" rpy="1.5708 -0 0"/>
+      <geometry>
+        <mesh filename="package://urdf_collection/meshes/kr3cr/kr3cr_link3.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1" />
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <inertia ixx="0.4" ixy="0" ixz="0" iyy="0.4" iyz="0" izz="0.4"/>
+    </inertial>
+  </link>
+  <link name="link3">
+    <visual>
+      <origin xyz="0 -0.265 5.88418e-17" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://urdf_collection/meshes/kr3cr/kr3cr_link4_correction1.stl" scale="1 1 1" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.265 5.88418e-17" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://urdf_collection/meshes/kr3cr/kr3cr_link4_correction1.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1" />
+      <origin xyz="0 1.11022e-16 -2.46519e-32" rpy="0 -0 0"/>
+      <inertia ixx="0.4" ixy="0" ixz="0" iyy="0.4" iyz="0" izz="0.4"/>
+    </inertial>
+  </link>
+  <link name="link4">
+    <visual>
+      <origin xyz="0 0 0" rpy="1.5708 -6.66134e-16 -1.5708"/>
+      <geometry>
+        <mesh filename="package://urdf_collection/meshes/kr3cr/kr3cr_link5.stl" scale="1 1 1" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="1.5708 -6.66134e-16 -1.5708"/>
+      <geometry>
+        <mesh filename="package://urdf_collection/meshes/kr3cr/kr3cr_link5.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1" />
+      <origin xyz="-1.11022e-16 9.86076e-32 0" rpy="0 -0 0"/>
+      <inertia ixx="0.4" ixy="-1.45434e-32" ixz="0" iyy="0.4" iyz="0" izz="0.4"/>
+    </inertial>
+  </link>
+  <link name="link5">
+    <visual>
+      <origin xyz="1.11022e-16 0 -0.27" rpy="-1.89255 1.5708 -0.321751"/>
+      <geometry>
+        <mesh filename="package://urdf_collection/meshes/kr3cr/kr3cr_link6.stl" scale="1 1 1" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="1.11022e-16 0 -0.27" rpy="-1.89255 1.5708 -0.321751"/>
+      <geometry>
+        <mesh filename="package://urdf_collection/meshes/kr3cr/kr3cr_link6.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1" />
+      <origin xyz="-1.11022e-16 2.22045e-16 4.42108e-17" rpy="0 -0 0"/>
+      <inertia ixx="0.4" ixy="-1.80297e-32" ixz="0" iyy="0.4" iyz="0" izz="0.4"/>
+    </inertial>
+  </link>
+  <link name="link6">
+    <visual>
+      <origin xyz="0 0 0" rpy="1.5708 -6.66134e-16 -1.5708"/>
+      <geometry>
+        <mesh filename="package://urdf_collection/meshes/kr3cr/kr3cr_link7.stl" scale="1 1 1" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="1.5708 -6.66134e-16 -1.5708"/>
+      <geometry>
+        <mesh filename="package://urdf_collection/meshes/kr3cr/kr3cr_link7.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1" />
+      <origin xyz="-2.22045e-16 4.42108e-17 1.11022e-16" rpy="0 -0 0"/>
+      <inertia ixx="0.4" ixy="-2.90868e-32" ixz="2.46519e-32" iyy="0.4" iyz="-1.2326e-32" izz="0.4"/>
+    </inertial>
+  </link>
+  <joint name="j0" type="revolute">
+    <parent link="link0"/>
+    <child  link="link1"/>
+    <origin xyz="0 0 0" rpy="3.14159 -0 0 "/>
+    <axis   xyz="0 0 1"/>
+    <limit lower="-3.14159" upper="3.14159" effort="50" velocity="4.18879" />
+    <dynamics damping="0.2" friction="0" />
+  </joint>
+  <joint name="j1" type="revolute">
+    <parent link="link1"/>
+    <child  link="link2"/>
+    <origin xyz="0.1 4.28626e-17 -0.35" rpy="1.5708 -0 0 "/>
+    <axis   xyz="0 2.22045e-16 1"/>
+    <limit lower="-0.785398" upper="2.35619" effort="50" velocity="3.66519" />
+    <dynamics damping="0.2" friction="0" />
+  </joint>
+  <joint name="j2" type="revolute">
+    <parent link="link2"/>
+    <child  link="link3"/>
+    <origin xyz="0 -0.265 5.88418e-17" rpy="0 -0 0 "/>
+    <axis   xyz="0 0 1"/>
+    <limit lower="-2.35619" upper="2.35619" effort="50" velocity="4.18879" />
+    <dynamics damping="0.2" friction="0" />
+  </joint>
+  <joint name="j3" type="revolute">
+    <parent link="link3"/>
+    <child  link="link4"/>
+    <origin xyz="0 0 0" rpy="1.5708 -6.66134e-16 -1.5708 "/>
+    <axis   xyz="-1.24492e-16 3.46536e-16 1"/>
+    <limit lower="-3.14159" upper="3.14159" effort="50" velocity="6.54498" />
+    <dynamics damping="0.2" friction="0" />
+  </joint>
+  <joint name="j4" type="revolute">
+    <parent link="link4"/>
+    <child  link="link5"/>
+    <origin xyz="1.11022e-16 0 -0.27" rpy="-1.89255 1.5708 -0.321751 "/>
+    <axis   xyz="-3.46536e-16 1.24492e-16 1"/>
+    <limit lower="-2.35619" upper="2.35619" effort="50" velocity="5.23599" />
+    <dynamics damping="0.2" friction="0" />
+  </joint>
+  <joint name="j5" type="continuous">
+    <parent link="link5"/>
+    <child  link="link6"/>
+    <origin xyz="0 0 0" rpy="1.5708 -6.66134e-16 -1.5708 "/>
+    <axis   xyz="-1.24492e-16 3.46536e-16 1"/>
+    <limit lower="-3.14159" upper="3.14159" effort="50" velocity="6.54498" />
+    <dynamics damping="0.2" friction="0" />
+  </joint>
+</robot>
